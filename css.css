@@ -1,0 +1,55 @@
+.layout {
+    margin: 0;
+    height: 100vh;
+    background-color: #eee;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 10% 80% 10%;
+    grid-template-areas: "head head head head head head head head head head"
+        "cont cont cont cont cont cont cont side side side"
+        "foot foot foot foot foot foot foot foot foot foot";
+}
+
+header {
+    grid-area: head;
+    background-color: blueviolet;
+    color: black;
+    padding: 20px;
+}
+
+header::before {
+    content: "header";
+}
+
+section {
+    grid-area: cont;
+    background-color: rgb(191, 144, 235);
+    color: black;
+    padding: 20px;
+}
+
+section::before {
+    content: "section";
+}
+
+aside {
+    grid-area: side;
+    background-color: rgb(48, 30, 64);
+    color: rgb(255, 251, 251);
+    padding: 20px;
+}
+
+aside::before {
+    content: "aside";
+}
+
+footer {
+    grid-area: foot;
+    background-color: rgb(51, 10, 87);
+    color: rgb(162, 162, 162);
+    padding: 20px;
+}
+
+footer::before {
+    content: "footer";
+}
